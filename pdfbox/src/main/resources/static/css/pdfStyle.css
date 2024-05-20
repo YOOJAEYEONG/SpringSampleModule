@@ -1,0 +1,8 @@
+*{ font-family: Arial,serif,"NotoSansKR";font-size: 16pt;}
+.border{border: 1px solid #AAAAAA;}
+td{border: 1px solid gray;border-collapse: collapse;}
+.NotoSansKR{font-family: NotoSansKR, "NotoSansKR", serif}
+.NotoSansKR-Bold{font-family: "NotoSansKR-Bold",serif;}
+.NanumGothic{font-family: NanumGothic, "NanumGothic",serif;}
+.YnPeople-Gothic{font-family: "유앤피플 고딕", serif}
+.green{color: #4CAF50;}
