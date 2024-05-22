@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.InputStream;
@@ -31,10 +32,10 @@ public class PdfController {
 			PdfRendererBuilder builder = new PdfRendererBuilder();
 
 			// ttf , otf 만 가능
-			builder.useFont(() -> getClass().getResourceAsStream("/static/fonts/유앤피플 고딕 UNI.ttf"), "유앤피플 고딕");
-			builder.useFont(() -> getClass().getResourceAsStream("/static/fonts/Nanum_Gothic/NanumGothic-Regular.ttf"), "NanumGothic");
-			builder.useFont(() -> getClass().getResourceAsStream("/static/fonts/Noto_Sans_KR/static/NotoSansKR-Regular.ttf"), "NotoSansKR");
-			builder.useFont(() -> getClass().getResourceAsStream("/static/fonts/Noto_Sans_KR/static/NotoSansKR-Bold.ttf"), "NotoSansKR-Bold");
+			builder.useFont(() -> getClass().getResourceAsStream("/static/font/유앤피플 고딕 UNI.ttf"), "유앤피플 고딕");
+			builder.useFont(() -> getClass().getResourceAsStream("/static/font/NanumGothic/NanumGothic-Regular.ttf"), "NanumGothic");
+			builder.useFont(() -> getClass().getResourceAsStream("/static/font/Noto_Sans_KR/static/NotoSansKR-Regular.ttf"), "NotoSansKR");
+			builder.useFont(() -> getClass().getResourceAsStream("/static/font/Noto_Sans_KR/static/NotoSansKR-Bold.ttf"), "NotoSansKR-Bold");
 
 			float a4Width = PageSize.A4.getPageWidth().getFloatValue((short) 0);
 			float a4Height = PageSize.A4.getPageHeight().getFloatValue((short) 0);
@@ -49,5 +50,9 @@ public class PdfController {
 
 	}
 
+	@GetMapping("/pdf/pdfSample")
+	String sampleHtmlView() {
+		return "/html/template/pdf/pdfSample.html";
+	}
 
 }

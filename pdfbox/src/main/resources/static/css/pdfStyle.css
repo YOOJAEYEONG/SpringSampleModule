@@ -1,8 +1,33 @@
-*{ font-family: Arial,serif,"NotoSansKR";font-size: 16pt;}
+@font-face {
+    font-family: "NanumGothic";
+    src: url("http://localhost:8080/font/NanumGothic/NanumGothic-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NanumGothic";
+    src: url("http://localhost:8080/font/NanumGothic/NanumGothic-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Noto Sans KR";
+    src: url("http://localhost:8080/font/Noto_Sans_KR/static/NotoSansKR-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Noto Sans KR Bold";
+    src: url("http://localhost:8080/font/Noto_Sans_KR/static/NotoSansKR-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+*{ font-family: Arial,"Noto Sans KR" , serif;font-size: 16pt;}
 .border{border: 1px solid #AAAAAA;}
 td{border: 1px solid gray;border-collapse: collapse;}
-.NotoSansKR{font-family: NotoSansKR, "NotoSansKR", serif}
-.NotoSansKR-Bold{font-family: "NotoSansKR-Bold",serif;}
+.NotoSansKR{font-family: NotoSansKR, "Noto Sans KR", serif}
+.NotoSansKR-Bold{font-family: "Noto Sans KR Bold",serif;}
 .NanumGothic{font-family: NanumGothic, "NanumGothic",serif;}
+
 .YnPeople-Gothic{font-family: "유앤피플 고딕", serif}
 .green{color: #4CAF50;}
